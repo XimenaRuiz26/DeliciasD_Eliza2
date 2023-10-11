@@ -1,0 +1,32 @@
+sep 30, 2023 11:11:16 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-09-30
+oct 03, 2023 10:03:28 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-03
+oct 03, 2023 10:35:20 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-03
+oct 03, 2023 10:41:24 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-03
+oct 03, 2023 10:42:55 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-03
+oct 08, 2023 1:14:50 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-08
+oct 08, 2023 1:17:50 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-08
+oct 10, 2023 5:30:41 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Juan,2023-10-10
+oct 10, 2023 7:02:37 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Juan,2023-10-10
+oct 10, 2023 7:18:09 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Juan,2023-10-10
+oct 10, 2023 8:02:06 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: iaschool602@gmail.com,2023-10-10
+oct 10, 2023 8:06:59 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: iaschool602@gmail.com,2023-10-10
+oct 10, 2023 8:08:33 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Juan,2023-10-10
+oct 10, 2023 8:33:17 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crear vendedor,Se ha creado un nuevo vendedor en la red 1095550251,2023-10-10
+oct 10, 2023 8:33:29 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Ximena,2023-10-10
+oct 10, 2023 9:32:44 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: crear vendedor,Se ha creado un nuevo vendedor en la red 487897,2023-10-10
