@@ -129,6 +129,7 @@ public class ReedController {
 	    		int variable = JOptionPane.showOptionDialog (null, "¿Por qué medio desea realizar su pago?", "Metodos de pago", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, null, botones, botones[0]);
 	    		if (variable >= 0 && variable < botones.length) {
 	                opcionSeleccionada = botones[variable];
+	                System.out.println("Hola");
 	    		}
 	    		aplicacion.mostrarVentanaFactura(totalPrecio, opcionSeleccionada, productoSeleccionado.getNombre(), newValue);
 	    	});
