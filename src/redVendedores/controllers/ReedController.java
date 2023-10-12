@@ -14,7 +14,7 @@ import org.controlsfx.control.textfield.TextFields;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
@@ -26,6 +26,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -162,6 +163,10 @@ public class ReedController {
 	    private GridPane grid;
 	    
 	    @FXML
+	    private Button btnComprar;
+
+	    
+	    @FXML
 	    private TableColumn<Cliente, String> columnSolicitudes;
 	    
 	    @FXML
@@ -225,7 +230,10 @@ public class ReedController {
 	    }
 
 
+	    @FXML
+	    void ComprarEvent(ActionEvent event) {
 
+	    }
 
 	    @FXML
 	    void notificacionesEvent(MouseEvent event) {

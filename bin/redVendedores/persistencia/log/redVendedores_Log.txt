@@ -30,3 +30,11 @@ oct 10, 2023 8:33:29 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLo
 INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Ximena,2023-10-10
 oct 10, 2023 9:32:44 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: crear vendedor,Se ha creado un nuevo vendedor en la red 487897,2023-10-10
+oct 10, 2023 9:51:59 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-10
+oct 10, 2023 9:52:06 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-10
+oct 10, 2023 9:52:23 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Juan,2023-10-10
+oct 11, 2023 2:08:59 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-11
