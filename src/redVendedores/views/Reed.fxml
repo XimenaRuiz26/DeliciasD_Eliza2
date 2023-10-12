@@ -74,7 +74,7 @@
             </ScrollPane>
             <ImageView fitHeight="76.0" fitWidth="168.0" layoutX="794.0" layoutY="111.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../DeliciasD_Eliza/src/imagenes/cata.png" />
+                  <Image url="@../../../../DeliciasD_Eliza2/src/imagenes/cata.png" />
                </image>
             </ImageView>
             <AnchorPane layoutX="40.0" layoutY="149.0" prefHeight="490.0" prefWidth="345.0" style="-fx-background-color: #F5f2ee; -fx-background-radius: 30 30 30 30; -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);">
