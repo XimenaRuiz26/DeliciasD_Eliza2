@@ -38,3 +38,25 @@ oct 10, 2023 9:52:23 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLo
 INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Juan,2023-10-10
 oct 11, 2023 2:08:59 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
 INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-11
+oct 11, 2023 11:55:23 PM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-11
+oct 12, 2023 12:34:29 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: 12345,2023-10-12
+oct 12, 2023 12:35:47 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: Juan,2023-10-12
+oct 12, 2023 12:39:44 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-12
+oct 12, 2023 12:39:49 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-12
+oct 12, 2023 12:39:55 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-12
+oct 12, 2023 12:40:03 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-12
+oct 12, 2023 12:40:28 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+ADVERTENCIA: inicio Sesion,Error de sesion del usuario,2023-10-12
+oct 12, 2023 12:41:30 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: juan,2023-10-12
+oct 12, 2023 12:45:10 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: juan,2023-10-12
+oct 12, 2023 12:46:25 AM redVendedores.persistencia.ArchivoUtil guardarRegistroLog
+INFORMACIÓN: inicio Sesion,Inicio de sesion del usuario: juan,2023-10-12

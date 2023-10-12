@@ -203,7 +203,7 @@ public class Cliente implements Serializable {
 
 
 	public boolean verificarUsuario(String usuario, String contrasenia) {
-		if(getDocumento().equals(documento) && getContrasenia().equals(contrasenia)){
+		if(getUsuario().equals(usuario) && getContrasenia().equals(contrasenia)){
 			return true;
 		}
 		return false;

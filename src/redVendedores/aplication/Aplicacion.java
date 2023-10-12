@@ -8,7 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-import redVendedores.controllers.ChatController;
+import redVendedores.controllers.FacturaController;
 import redVendedores.controllers.IniciarRedController;
 import redVendedores.controllers.LoginAdministradorController;
 import redVendedores.controllers.LoginVendedorController;
@@ -204,6 +204,25 @@ import redVendedores.model.Red;
 			e.printStackTrace();
 		}
 	}
+	
+	public void mostrarVentanaFactura(Integer totalPagar, String metodo, String nombre, Integer numP){
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Aplicacion.class.getResource("../views/Factura.fxml"));
+
+			AnchorPane rootLayout = (AnchorPane)loader.load();
+
+			FacturaController loginAdministradorController = loader.getController();
+			loginAdministradorController.setAplicacion(this, totalPagar, metodo, nombre, numP);
+
+			Scene scene = new Scene(rootLayout);
+			primaryStage.setScene(scene);
+			primaryStage.show();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 	public void mostrarVentanaRestablecerContrasena2Admin(String correo, String codigoGenerado) {
 		try {
@@ -244,43 +263,6 @@ import redVendedores.model.Red;
 		}
 	}
 
-//	public void mostrarVentanaAmigo(String documento, String nombre){
-//		try {
-//			FXMLLoader loader = new FXMLLoader();
-//			loader.setLocation(Aplicacion.class.getResource("../views/VentanaAmigo.fxml"));
-//
-//			AnchorPane rootLayout = (AnchorPane)loader.load();
-//
-//			VentanaAmigoController ventanaAmigoController = loader.getController();
-//			ventanaAmigoController.setAplicacion(this, documento, nombre);
-//
-//			Scene scene = new Scene(rootLayout);
-//			primaryStage.setScene(scene);
-//			primaryStage.show();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
-	
-	public void mostrarChat(){
-		try {
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Aplicacion.class.getResource("../views/Chat.fxml"));
-
-			AnchorPane rootLayout = (AnchorPane)loader.load();
-
-			ChatController chatController = loader.getController();
-			chatController.setAplicacion(this);
-
-			Scene scene = new Scene(rootLayout);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
 
 
 	public static void main(String[] args) {

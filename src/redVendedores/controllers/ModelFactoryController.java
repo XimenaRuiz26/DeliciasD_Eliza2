@@ -101,7 +101,7 @@ public class ModelFactoryController {
 		Cliente vendedor = new Cliente();
 		vendedor.setNombre("Juan Esteban");
 		vendedor.setApellidos("Velez");
-		vendedor.setUsuario("Juan");
+		vendedor.setUsuario("juan");
 		vendedor.setCorreo("angieruiz564@gmail.com");
 		vendedor.setDocumento("12345");
 		vendedor.setDireccion("jskjdaf");
@@ -593,26 +593,6 @@ public class ModelFactoryController {
 		return cliente;
 
 	}
-//
-//	public void actualizarVendedor(String documento, String nombre2, String apellido, String documento2,
-//			String direccion, String contrasenia) {
-//
-//		 getRed().actualizarVendedor(documento, nombre2, apellido, documento2, direccion, contrasenia);
-//		 Persistencia.guardaRegistroLog("Se ha actualizado un vendedor "+documento, 1, "actualizar vendedor");
-//	}
-//	
-//	public Boolean eliminarVendedor(String cedula) throws VendedorException {
-//
-//		boolean flagVendedorExiste = false;
-//
-//		flagVendedorExiste = getRed().eliminarVendedor(cedula);
-//		if(flagVendedorExiste){
-//			Persistencia.guardaRegistroLog("Se ha eliminado un vendedor "+cedula, 1, "eliminar vendedor");
-//		}else{
-//			Persistencia.guardaRegistroLog("No se ha podido eliminar el vendedor"+cedula, 2, "eliminar vendedor");
-//		}
-//		return flagVendedorExiste;
-//	}
 
 	
 
@@ -625,11 +605,6 @@ public class ModelFactoryController {
 		return red.verificarUsuario(usuario,contrasenia);
 	}
 
-//	public boolean verificarDocumento(String documento) {
-//
-//		return red.existeVendedor(documento);
-//	}
-//
 	public boolean verificarAdmin(String usuario, String contrasenia){
 		if(red.verificarAdmin(usuario, contrasenia)){
 			Persistencia.guardaRegistroLog("Inicio de sesion del usuario: "+usuario, 1, "inicio Sesion");
@@ -651,25 +626,14 @@ public class ModelFactoryController {
 		red.actualizarContraseniaAdmin(nuevaContrasenia, identificacion);
 
 	}
-//
-//
-//	public ArrayList<Cliente> obtenerVendedores() {
-//		return red.getListaVendedores();
-//
-//	}
-//
-//	public ArrayList<String> obtenerVendedoresNombre(String documento) {
-//		return red.obtenerNombresVendedores(documento);
-//
-//	}
-//
-//	public String obtenerNombre(String documento) {
-//		return red.obtenerNombreVendedor(documento);
-//	}
-//
-//	public ArrayList<Producto> obtenerProductos(String documento) {
-//		return red.obtenerProductos(documento);
-//	}
+
+	public String obtenerNombre(String usuario) {
+		return red.obtenerNombreCliente(usuario);
+	}
+
+	public ArrayList<Producto> obtenerProductos() {
+		return red.getListaProductos();
+	}
 //
 //	public Producto crearProducto(String nombre, String codigo, String precio, String estado, String categoria,
 //			String fechaAux, String documento) throws ProductoException {
@@ -763,6 +727,10 @@ public class ModelFactoryController {
 
 	public String traerNombre(String correo) {
 		return red.conseguirNombre(correo);
+	}
+
+	public int calcularTotal(Integer newValue, String codigo) {
+		return red.calcularTotal(newValue, codigo);
 	}
 	
 

@@ -16,6 +16,7 @@ public class Red implements Serializable{
 	private static final long serialVersionUID = 1L;
 	private String nombre;
 	private ArrayList<Cliente> listaClientes;
+	private ArrayList<Producto> listaProductos;
 	private Administrador administrador;
 
 	/*
@@ -27,14 +28,13 @@ public class Red implements Serializable{
 		this.nombre = nombre;
 		listaClientes = new ArrayList<Cliente>();
 		this.administrador = new Administrador();
+		listaProductos = new ArrayList<Producto>();
 	}
 
 	public Red(){
 		super();
 		
 	}
-
-
 
 	/*
 	 * Getters & setters de la clase Red
@@ -65,10 +65,22 @@ public class Red implements Serializable{
 	public void setlistaClientes(ArrayList<Cliente> listaClientes) {
 		this.listaClientes = listaClientes;
 	}
+	
+
+	public ArrayList<Producto> getListaProductos() {
+		return listaProductos;
+	}
+
+	public void setListaProductos(ArrayList<Producto> listaProductos) {
+		this.listaProductos = listaProductos;
+	}
+	
+	
 
 	/*
 	 * metodo equals de la clase Red
 	 */
+
 
 	@Override
 	public int hashCode() {
@@ -118,6 +130,8 @@ public class Red implements Serializable{
 		}
 		return false;
 	}
+	
+	
 
 	/*
 	 * Metodo que verifica si el documento (Usuario) y contrasenia ingresados por el administrador son correctos
@@ -201,54 +215,19 @@ public class Red implements Serializable{
 			}
 		}
 
-//	/*
-//	 * Metodo que permite actualizar un vendedor de la red
-//	 */
-//
-//	public void actualizarVendedor(String documento, String nombre2, String apellido, String documento2,
-//			String direccion, String contrasenia) {
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().equals(documento)){
-//				vendedor.setNombre(nombre2);
-//				vendedor.setApellidos(apellido);
-//				vendedor.setDocumento(documento2);
-//				vendedor.setDireccion(direccion);
-//				vendedor.setContrasenia(contrasenia);
-//			}
-//		}
-//	}
-//
-//	/*
-//	 * Metodo que permite eliminar un vendedor de la red
-//	 */
-//
-//	public boolean eliminarVendedor(String documento) {
-//		if(existeVendedor(documento)){
-//			for (Cliente vendedor : listaClientes) {
-//				if(vendedor.getDocumento().equals(documento)){
-//					listaClientes.remove(vendedor);
-//					return true;
-//				}
-//			}
-//		}else{
-//			return false;
-//		}
-//		return false;
-//	}
-//
-//	/*
-//	 * Metodo obtiene el nombre de un vendedor segun su numero de identificacion (documento)
-//	 */
-//
-//	public String obtenerNombreVendedor(String documento) {
-//		String cadenaAux= "";
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().equals(documento)){
-//				cadenaAux= vendedor.getNombre()+" "+vendedor.getApellidos();
-//			}
-//		}
-//		return cadenaAux;
-//	}
+	/*
+	 * Metodo obtiene el nombre de un vendedor segun su numero de identificacion (documento)
+	 */
+
+	public String obtenerNombreCliente(String usuario) {
+		String cadenaAux= "";
+		for (Cliente cliente : listaClientes) {
+			if(cliente.getUsuario().equals(usuario)){
+				cadenaAux= cliente.getNombre()+" "+cliente.getApellidos();
+			}
+		}
+		return cadenaAux;
+	}
 //
 //	/*
 //	 * Metodo que retorna una lista de productos de un vendedor
@@ -264,75 +243,8 @@ public class Red implements Serializable{
 //		return listaProducto;
 //	}
 //
-//	/*
-//	 * Metodo que llama la clase Vendedor para verificar si existe un producto
-//	 */
-//	public boolean existeProducto(String documento, String codigo) {
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().equals(documento)){
-//				vendedor.verificarExisteProducto(codigo);
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
-//
-//	/*
-//	 * Metodo que llama a la clase Vendedor para poder crear un producto
-//	 */
-//
-//	public Producto crearProducto(String nombre2, String codigo, String precio, String estado, String categoria,
-//			String fechaHora, String documento) throws ProductoException {
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().equals(documento)){
-//				return vendedor.crearProducto(nombre2, codigo, precio, estado, categoria, fechaHora, documento);
-//			}
-//			}
-//		return null;
-//
-//	}
-//
-//	/*
-//	 * Metodo que llama a la clase Vendedor para poder actualizar un producto
-//	 */
-//
-//	public void actualizarProducto(String codigo, String nombre2, String codigo2, String precio, String estado,
-//			String categoria, String fechaHora, String documento) {
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().equals(documento)){
-//				vendedor.actualizarProducto(codigo, nombre2, codigo2, precio, estado, categoria, fechaHora);
-//			}
-//		}
-//	}
-//
-//	/*
-//	 * Metodo que llama a la clase Vendedor para poder eliminar un producto
-//	 */
-//
-//	public boolean eliminarProducto(String codigo, String documento) {
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().equals(documento)){
-//				return vendedor.eliminarProducto(codigo);
-//			}
-//		}
-//		return false;
-//
-//	}
-//
-//	/*
-//	 * Metodo que retorna una lista con los nombres de los vendedores de la red
-//	 */
-//
-//	public ArrayList<String> obtenerNombresVendedores(String documento) {
-//		ArrayList<String> nombres = new ArrayList<>();
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().compareTo(documento)!=0){
-//				nombres.add(vendedor.getNombre()+ " " + vendedor.getApellidos());
-//			}
-//		}
-//		return nombres;
-//	}
-//
+
+
 //	/*
 //	 * Metodo que verifica si el nombre ingresado es igual al almacenado
 //	 */
@@ -347,22 +259,7 @@ public class Red implements Serializable{
 //		return false;
 //	}
 //
-//	/*
-//	 * Metodo que retorna una lista de productos de los vendedores amigos
-//	 */
-//
-//	public ArrayList<Producto> obtenerProductosAmigos(String nombre2) {
-//		ArrayList<Producto> listaProducto = new ArrayList<>();
-//		for (Cliente vendedor : listaClientes) {
-//			String nombreVendedor= vendedor.getNombre()+" "+vendedor.getApellidos();
-//			if(nombreVendedor.equals(nombre2)){
-//				listaProducto.addAll(vendedor.getListaProductos());
-//			}
-//		}
-//		return listaProducto;
-//	}
-//
-//	/*
+
 //	 * Metodo que llama a la clase Vendedor para poder dar Me Gusta a un producto
 //	 */
 //
@@ -397,18 +294,7 @@ public class Red implements Serializable{
 //
 //	}
 //
-//	/*
-//	 * Metodo que retorna una lista con los nombres de los vendedores
-//	 */
-//	public ArrayList<Cliente> obtenerAmigos(String documento) {
-//			for (Cliente vendedor : listaClientes) {
-//				if(vendedor.getDocumento().equals(documento)){
-//					return vendedor.getListaAmigos();
-//				}
-//			}
-//			return null;
-//		}
-//
+
 //	
 //	public String obtenerNumeroMeGustas2(String codigo, String documento) {
 //		for (Cliente vendedor : listaClientes) {
@@ -418,15 +304,7 @@ public class Red implements Serializable{
 //		}
 //		return null;
 //	}
-//
-//	public ArrayList<Producto> obtenerProductosTop() {
-//		ArrayList<Producto> productosTop = new ArrayList<>();
-//		for (int i = 0; i < listaClientes.size(); i++) {
-//			Cliente vendedor= listaClientes.get(i);
-//			productosTop.addAll(vendedor.obtenerProductosTop());
-//			}
-//			return productosTop; 
-//		}
+
 //
 //	public void escribirComentario(String codigo, String nombre2) throws ComentarioException{
 //		for (Cliente vendedor : listaClientes) {
@@ -448,53 +326,8 @@ public class Red implements Serializable{
 //		
 //	}
 //
-//	public boolean agregarAmigo(String nombre, String documento) {
-//		for(Cliente vendedor: listaClientes){
-//			String nombreVendedor= vendedor.getNombre()+" "+vendedor.getApellidos();
-//			for (Cliente vendedor2 : listaClientes) {
-//				if(vendedor2.getDocumento().equals(documento) && nombreVendedor.equals(nombre)){
-//				 return vendedor.agregarAmigo(vendedor, vendedor2);
-//				}
-//			}
-//		}	
-//		return false;
-//	}
-//
-//	public ArrayList<Cliente> obtenerSolicitudes(String documento) {
-//		ArrayList<Cliente> listaSolicitudes = new ArrayList<>();
-//		for (Cliente vendedor : listaClientes) {
-//			if(vendedor.getDocumento().equals(documento)){
-//				listaSolicitudes.addAll(vendedor.getListaSolicitudesP());
-//			}
-//		}
-//		return listaSolicitudes;
-//		
-//	}
-//
-//	public boolean aceptarSolicitud(String nombreS, String documento) {
-//		for(Cliente vendedor: listaClientes){
-//			String nombreVendedor= vendedor.getNombre()+" "+vendedor.getApellidos();
-//			for (Cliente vendedor2 : listaClientes) {
-//				if(vendedor2.getDocumento().equals(documento) && nombreVendedor.equals(nombreS)){
-//				 return vendedor.aceptarSolicitud(vendedor, vendedor2);
-//				}
-//			}
-//		}	
-//		return false;
-//		}
-//
-//
-//	public boolean eliminarSolicitud(String documentoS, String documento) {
-//		for(Cliente vendedor: listaClientes){
-//			String nombreVendedor= vendedor.getNombre()+" "+vendedor.getApellidos();
-//			for (Cliente vendedor2 : listaClientes) {
-//				if(vendedor2.getDocumento().equals(documento) && nombreVendedor.equals(documentoS)){
-//				 return vendedor.eliminarSolicitud(vendedor, vendedor2);
-//				}
-//			}
-//		}	
-//		return false;	
-//	}
+
+
 
 	public boolean verificarCorreo(String correo) {
 		for (Cliente vendedor : listaClientes) {
@@ -512,6 +345,17 @@ public class Red implements Serializable{
 			}
 		}
 		return correo;
+	}
+
+	public int calcularTotal(Integer newValue, String codigo) {
+		int total= 0;
+		for(Producto producto: listaProductos){
+			if(producto.getCodigo().equals(codigo)){
+				total= newValue * (Integer.parseInt(producto.getPrecio()));
+			}
+		}
+		return total;
+		
 	}
 	
 	
